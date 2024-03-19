@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp3.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Picker x:Name="cityPicker" Title = "Выберите город:" FontSize="Medium"
+                    SelectedIndexChanged="PickerSelectedIndexChanged">
+                <Picker.Items>
+                    <!--<x:String>Орехово-Зуево</x:String>
+                    <x:String>Сочи</x:String>-->
+                    <!--<x:String>Мурманск</x:String>-->
+                </Picker.Items>
+            </Picker>
+            <Button Text="Узнать погоду" Command="{Binding LoadDataCommand}"  />
+            <Label FontSize="Micro" Text="Данные на дату:" />
+            <Label FontSize="Micro" FontAttributes="Bold" Text="{Binding Time}" />
+            <Label FontSize="Micro" Text="Температура:" />
+            <Label FontSize="Micro" FontAttributes="Bold"  Text="{Binding Temperature}" />
+            <Label FontSize="Micro" Text="Скорость ветра:" />
+            <Label FontSize="Micro" FontAttributes="Bold" Text="{Binding Windspeed}" />
+            <Label FontSize="Micro" Text="Относительная влажность:" />
+            <Label FontSize="Micro" FontAttributes="Bold" Text="{Binding Relative_humidity_2m}" />
+            <Label FontSize="Micro" Text="Время суток:" />
+            <Label FontSize="Micro" FontAttributes="Bold" Text="{Binding Is_day}" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage> 
